@@ -1,6 +1,5 @@
 package com.ecnu.wnuy.controller;
 
-import com.ecnu.wnuy.dao.UserDAO;
 import com.ecnu.wnuy.domain.User;
 import com.ecnu.wnuy.domain.UserDTO;
 import com.ecnu.wnuy.service.UserService;
