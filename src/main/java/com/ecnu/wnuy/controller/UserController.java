@@ -21,7 +21,7 @@ public class UserController {
     UserService userService;
 
     @RequestMapping("/userinfo/{userId}")
-    public User getUserById(@PathVariable String userId) {
+    public UserDTO getUserById(@PathVariable String userId) {
         return userService.findUserById(userId);
     }
 
@@ -34,4 +34,15 @@ public class UserController {
     public List<User> getFolloweeById(@PathVariable String userId) {
         return userService.findFolloweeById(userId);
     }
+
+    @RequestMapping("/followee-deletion/{id1}/{id2}")
+    public int deleteFollowee(@PathVariable String id1, @PathVariable String id2) {
+        return userService.deleteFollowee(id1, id2);
+    }
+
+    @RequestMapping("/newfollow/{id1}/{id2}")
+    public int createFollow(@PathVariable String id1, @PathVariable String id2) {
+        return userService.createFollow(id1, id2);
+    }
 }
+

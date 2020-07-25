@@ -1,51 +1,34 @@
 package com.ecnu.wnuy.domain;
 
-import javax.persistence.*;
+import java.sql.Date;
 import java.sql.Timestamp;
-import java.util.Date;
 
 /**
  * @Author Shen Lei
- * @Date 2020/7/19 18:47
+ * @Date 2020/7/24 0:25
  */
-@Entity
-@Table(name = "comment")
-public class Comment {
+public class CommentDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
     private int id;
-
-    @Column(name = "user_id")
     private String userId;
-
-    @Column(name = "resturant_id")
     private String resturantId;
-
-    @Column(name = "rating")
     private int rating;
-
-    @Column(name = "content")
     private String content;
-
-    @Column(name = "date")
-    private Date date;
-
-    @Column(name = "parent_id")
     private int parentId;
+    private String userName;
 
-    public Comment() {
+    public CommentDTO() {
 
     }
 
-    public Comment(String userId, String resturantId, int rating, String content, Date date, int parentId) {
+    public CommentDTO(int id, String userId, String resturantId, int rating, String content, int parentId, String userName) {
+        this.id = id;
         this.userId = userId;
         this.resturantId = resturantId;
         this.rating = rating;
         this.content = content;
-        this.date = date;
         this.parentId = parentId;
+        this.userName = userName;
     }
 
     public int getId() {
@@ -88,19 +71,19 @@ public class Comment {
         this.content = content;
     }
 
-    public Date getDate() {
-        return date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
-    }
-
     public int getParentId() {
         return parentId;
     }
 
     public void setParentId(int parentId) {
         this.parentId = parentId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 }
