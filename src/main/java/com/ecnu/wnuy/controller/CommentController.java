@@ -12,6 +12,7 @@ import java.util.List;
  * @Date 2020/7/19 18:47
  */
 @RestController
+@CrossOrigin
 public class CommentController {
 
     @Autowired

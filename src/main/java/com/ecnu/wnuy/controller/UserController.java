@@ -4,6 +4,7 @@ import com.ecnu.wnuy.domain.User;
 import com.ecnu.wnuy.domain.UserDTO;
 import com.ecnu.wnuy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import java.util.List;
  * @Date 2020/7/18 17:07
  */
 @RestController
+@CrossOrigin
 public class UserController {
 
     @Autowired
